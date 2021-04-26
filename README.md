@@ -1,15 +1,15 @@
 # CloudProject
-*4 full responsive pages (formNewParking page, list page, object page, form page)
+1)4 full responsive pages (formNewParking page, list page, object page, form page)
 
-*The form requires to be ready to get parameters from server side
+2)The form requires to be ready to get parameters from server side
 
-*Make sure every link refers to a href="#"
+3)Make sure every link refers to a href="#"
 
-*logo is a link with background image from css
+4)logo is a link with background image from css
 
-*Js one at least
+5)js one at least
 
-*CDN SERVICE
+6)CDN SERVICE
 
 Implementation : 
 
