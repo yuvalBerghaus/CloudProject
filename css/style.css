@@ -26,8 +26,9 @@ header a {
     background-size: contain;
     background-image: url('../images/logo.png');
 }
-main {
+#listPage main {
     width: 360px;
+    margin-top:7px;
     height: auto;
     display: flex;
     flex-wrap: wrap;
@@ -47,8 +48,7 @@ h2 {
 }
 /* List of main page by generic order */
 #list {
-    display:flex;
-    flex-direction: column;
+    
 }
 #myParkingList {
     flex:1;
@@ -56,11 +56,11 @@ h2 {
 }
 #familyParkingList {
     flex:1;
-    order:1;
+    order:2;
 }
 #friendsParkingList {
     flex:1;
-    order:1;
+    order:3;
 }
 .ellipse{
     background-color: #CCCCCC;
@@ -69,4 +69,13 @@ h2 {
     border-radius: 50%;
     display: inline-flex;
     top:10px;
+    font-size: 22px;
+    font-weight:600;
+    justify-content: center;
+    align-items: center;
+}
+#plus {
+    font-size: 10px;
+    float: right;
+    margin-top:-15px;
 }
