@@ -1,0 +1,9 @@
+#wrapper {
+    margin: 0px auto;
+    width: 1000px;
+    position: relative;
+}
+@viewport {
+    width: 480px;
+    zoom: 1;
+}
