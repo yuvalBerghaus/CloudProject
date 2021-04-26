@@ -6,7 +6,7 @@
     width: 480px;
     zoom: 1;
 }
-header, main, footer, nav, section {
+header, main, footer, nav {
     display: block;
 }
 body {
@@ -20,7 +20,7 @@ header {
     align-items:center;
 }
 header a {
-    width: 100%;
+    width: 119px;
     height: 119px;
     background-repeat: no-repeat;
     background-size: contain;
@@ -34,8 +34,39 @@ main {
 }
 h1 {
     font-size:24px;
+    display: inline;
 }
 h2 {
     font-size:24px;
     font-weight: normal;
+    display: inline;
+}
+#h1Section {
+    width: 100%;
+    text-align: center;
+}
+/* List of main page by generic order */
+#list {
+    display:flex;
+    flex-direction: column;
+}
+#myParkingList {
+    flex:1;
+    order:1;
+}
+#familyParkingList {
+    flex:1;
+    order:1;
+}
+#friendsParkingList {
+    flex:1;
+    order:1;
+}
+.ellipse{
+    background-color: #CCCCCC;
+    height: 33px;
+    width: 33px;
+    border-radius: 50%;
+    display: inline-flex;
+    top:10px;
 }
