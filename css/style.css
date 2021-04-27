@@ -27,6 +27,7 @@ header {
     display: flex;
     width: 36px;
     height: 36px;
+    background-repeat: no-repeat;
     background-image: url(../images/Ham_Icon.png);
 }
 
@@ -34,6 +35,7 @@ header {
     display: flex;
     width: 36px;
     height: 36px;
+    background-repeat: no-repeat;
     background-image: url(../images/Notifications_None_Icon.png);
 }
 
@@ -41,6 +43,7 @@ header {
     display: flex;
     width: 36px;
     height: 36px;
+    background-repeat: no-repeat;
     background-image: url(../images/Search_Icon.png);
 }
 
@@ -54,7 +57,6 @@ header a {
 
 #listPage main {
     width: 360px;
-    margin-top: 7px;
     height: auto;
     display: flex;
     flex-wrap: wrap;
@@ -74,19 +76,26 @@ h2 {
 #h1Section {
     width: 100%;
     text-align: center;
-    margin-bottom: 25px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    height: 33px;
+    margin-top: 7px;
 }
 
 #hImg {
     height: 33px;
     width: 33px;
     border-radius: 100%;
+    margin: 8px;
     background-image: url(../images/liatIcon.png);
 }
 
 /* List of main page by generic order */
 
-#list {}
+#list {
+    margin-top: 20px;
+}
 
 #myParkingList {
     flex: 1;
@@ -118,6 +127,7 @@ h2 {
     display: flex;
     width: 26px;
     height: 26px;
+    float: right;
     background-image: url(../images/Edit_Icon.png);
 }
 
