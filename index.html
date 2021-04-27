@@ -5,21 +5,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
-    <title>Document</title>
+    <title>Oops!e</title>
 </head>
 
 <body id="listPage">
     <header>
-        <section>
+        <section id="hamburger">
             <!--Section of Hamburger-->
-
         </section>
         <a href="#">
         </a>
+        <section id="bell">
+            <!--Section of Bell -->
+
+        </section>
+        <section id="search">
+            <!--Section of Search -->
+
+        </section>
     </header>
     <div id="wrapper">
         <main>
             <section id="h1Section">
+                <article id="hImg"></article>
                 <h1>
                     Parking Lots
                 </h1>
@@ -30,33 +38,49 @@
                     <h2>
                         My Parking Lots
                     </h2>
-                    <section class="ellipse">
-                        <article>
-                            P
-                        </article>
-                        <article id="plus">
-                            +
-                        </article>
-                    </section>
+                    <article id="addParking"></article>
+                    <article id="edit"></article>
                     <ul>
-                        <!-- <?php
-                        $a = $_GET['idList'];
-
-                        foreach ($a as $v) {
-                            echo "<li id="block"> " . $_GET['subject'] . " at " . $_GET['web']."</li>";
-                        }
-                        ?> -->
+                        <section class="rectangle">
+                            <article class="user" id="liat"></article>
+                            <h2 class="parkingName">My Parking</h2>
+                            <aside class="trafficLight" id="occ">
+                                <h6>Occupied</h6>
+                            </aside>
+                        </section>
+                        <hr class="line">
                     </ul>
+
                 </section>
                 <section id="familyParkingList">
                     <h2>
                         Family Parking Lots
                     </h2>
+                    <ul>
+                        <section class="rectangle">
+                            <article class="user" id="tom"> </article>
+                            <h2 class="parkingName">Tom's Parking</h2>
+                            <aside class="trafficLight" id="att">
+                                <h6>Attention!</h6>
+                            </aside>
+                        </section>
+                        <section class="rectangle">
+                            <article class="user" id="yoni"></article>
+                            <h2 class="parkingName">Yoni's Parking</h2>
+                            <aside class="trafficLight" id="free">
+                                <h6>Free</h6>
+                            </aside>
+                        </section>
+                        <hr class="line">
+                    </ul>
                 </section>
                 <section id="friendsParkingList">
                     <h2>
                         Friends Parking Lots
                     </h2>
+                    <ul id="none">
+                        <h2>NONE</h2>
+                    </ul>
                 </section>
             </section>
         </main>

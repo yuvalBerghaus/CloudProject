@@ -2,23 +2,48 @@
     margin: 0px auto;
     width: 360px;
 }
+
 @viewport {
     width: 480px;
     zoom: 1;
 }
+
 header, main, footer, nav {
     display: block;
 }
+
 body {
     font-family: Arial, Helvetica, sans-serif;
 }
+
 header {
     background-color: #CCCCCC;
     height: 80px;
     display: flex;
-    /* justify-content:center; */
-    align-items:center;
+    align-items: center;
 }
+
+#hamburger {
+    display: flex;
+    width: 36px;
+    height: 36px;
+    background-image: url(../images/Ham_Icon.png);
+}
+
+#bell {
+    display: flex;
+    width: 36px;
+    height: 36px;
+    background-image: url(../images/Notifications_None_Icon.png);
+}
+
+#search {
+    display: flex;
+    width: 36px;
+    height: 36px;
+    background-image: url(../images/Search_Icon.png);
+}
+
 header a {
     width: 119px;
     height: 119px;
@@ -26,56 +51,140 @@ header a {
     background-size: contain;
     background-image: url('../images/logo.png');
 }
+
 #listPage main {
     width: 360px;
-    margin-top:7px;
+    margin-top: 7px;
     height: auto;
     display: flex;
     flex-wrap: wrap;
 }
+
 h1 {
-    font-size:24px;
+    font-size: 24px;
     display: inline;
 }
+
 h2 {
-    font-size:24px;
+    font-size: 24px;
     font-weight: normal;
     display: inline;
 }
+
 #h1Section {
     width: 100%;
     text-align: center;
+    margin-bottom: 25px;
 }
-/* List of main page by generic order */
-#list {
-    
-}
-#myParkingList {
-    flex:1;
-    order:1;
-}
-#familyParkingList {
-    flex:1;
-    order:2;
-}
-#friendsParkingList {
-    flex:1;
-    order:3;
-}
-.ellipse{
-    background-color: #CCCCCC;
+
+#hImg {
     height: 33px;
     width: 33px;
-    border-radius: 50%;
+    border-radius: 100%;
+    background-image: url(../images/liatIcon.png);
+}
+
+/* List of main page by generic order */
+
+#list {}
+
+#myParkingList {
+    flex: 1;
+    order: 1;
+}
+
+#familyParkingList {
+    flex: 1;
+    order: 2;
+}
+
+#friendsParkingList {
+    flex: 1;
+    order: 3;
+}
+
+#addParking {
+    background-color: #CCCCCC;
+    height: 28px;
+    width: 28px;
+    border-radius: 100%;
     display: inline-flex;
-    top:10px;
-    font-size: 22px;
-    font-weight:600;
     justify-content: center;
     align-items: center;
+    background-image: url("../images/P+.png");
 }
-#plus {
-    font-size: 10px;
-    float: right;
-    margin-top:-15px;
+
+#edit {
+    display: flex;
+    width: 26px;
+    height: 26px;
+    background-image: url(../images/Edit_Icon.png);
+}
+
+.rectangle {
+    display: flex;
+    width: 338px;
+    height: 82px;
+    background-color: #555555;
+    border-radius: 8px;
+    margin-bottom: 8px;
+    align-items: center;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+.line {
+    background-color: #CCCCCC;
+    height: 1px;
+}
+
+#none {
+    text-align: center;
+    color: #CCCCCC;
+}
+
+.trafficLight {
+    display: flex;
+    width: 18px;
+    height: 18px;
+    color: #FFFFFF;
+    border-radius: 10px;
+    justify-content: center;
+}
+
+#occ {
+    background-color: #E61610;
+}
+
+#att {
+    background-color: #FF6624;
+}
+
+#free {
+    background-color: #92D36E;
+}
+
+.user {
+    width: 65px;
+    height: 65px;
+    border-radius: 100%;
+}
+
+#liat {
+    background-image: url(../images/liat.png);
+}
+
+#yoni {
+    background-image: url(../images/yoni.png);
+}
+
+#tom {
+    background-image: url(../images/tom.png);
+}
+
+.parkingName {
+    color: #FFFFFF;
 }
