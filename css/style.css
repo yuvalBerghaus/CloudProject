@@ -7,7 +7,10 @@
     margin: 0px auto;
     width: 360px;
 }
-
+* {
+    margin:0;
+    padding:0;
+}
 @viewport {
     width: 480px;
     zoom: 1;
@@ -49,6 +52,7 @@ header a {
     height: auto;
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
 }
 
 h1 {
