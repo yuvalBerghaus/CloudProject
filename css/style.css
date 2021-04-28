@@ -1,3 +1,8 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
 #wrapper {
     margin: 0px auto;
     width: 360px;
@@ -210,9 +215,12 @@ ul {
 }
 
 .arrow {
-    width: 30px;
-    height: 30px;
-    background-image: url("../images/arrow.png");
+    width: 15px;
+    transform: rotate(270deg);
+}
+
+.arrowCol {
+    transform: rotate(90deg);
 }
 
 #action {
