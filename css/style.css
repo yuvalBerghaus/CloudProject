@@ -23,30 +23,6 @@ header {
     align-items: center;
 }
 
-#hamburger {
-    display: flex;
-    width: 36px;
-    height: 36px;
-    background-repeat: no-repeat;
-    background-image: url(../images/Ham_Icon.png);
-}
-
-#bell {
-    display: flex;
-    width: 36px;
-    height: 36px;
-    background-repeat: no-repeat;
-    background-image: url(../images/Notifications_None_Icon.png);
-}
-
-#search {
-    display: flex;
-    width: 36px;
-    height: 36px;
-    background-repeat: no-repeat;
-    background-image: url(../images/Search_Icon.png);
-}
-
 header a {
     width: 119px;
     height: 119px;
@@ -75,7 +51,6 @@ h2 {
 
 #h1Section {
     width: 100%;
-    text-align: center;
     align-items: center;
     justify-content: center;
     display: flex;
@@ -124,11 +99,7 @@ h2 {
 }
 
 #edit {
-    display: flex;
-    width: 26px;
-    height: 26px;
-    float: right;
-    background-image: url(../images/Edit_Icon.png);
+    width: 20px;
 }
 
 .rectangle {
@@ -182,6 +153,7 @@ ul {
     width: 65px;
     height: 65px;
     border-radius: 100%;
+    margin: 20px;
 }
 
 #liat {
