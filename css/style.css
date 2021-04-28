@@ -7,10 +7,12 @@
     margin: 0px auto;
     width: 360px;
 }
+
 * {
-    margin:0;
-    padding:0;
+    margin: 0;
+    padding: 0;
 }
+
 @viewport {
     width: 480px;
     zoom: 1;
@@ -198,13 +200,6 @@ ul {
     height: 121px;
     background-image: url("../images/car.png");
     background-repeat: no-repeat;
-}
-
-#camSwitch {
-    width: 24px;
-    height: 24px;
-    background-repeat: no-repeat;
-    background-image: url("../images/Flip_Camera_Icon.png");
 }
 
 .parkingRec {
