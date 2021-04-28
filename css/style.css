@@ -42,7 +42,14 @@ header a {
     background-image: url('../images/logo.png');
 }
 
-#listPage main {
+main {
+    width: 360px;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+nav {
     width: 360px;
     height: auto;
     display: flex;
