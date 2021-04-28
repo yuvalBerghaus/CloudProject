@@ -15,38 +15,18 @@ header, main, footer, nav {
 body {
     font-family: Arial, Helvetica, sans-serif;
 }
-
+.glyphicon {
+    font-size: 26px;
+}
+#tools {
+    display: inline-flex;
+}
 header {
     background-color: #CCCCCC;
     height: 80px;
     display: flex;
     align-items: center;
 }
-
-#hamburger {
-    display: flex;
-    width: 36px;
-    height: 36px;
-    background-repeat: no-repeat;
-    background-image: url(../images/Ham_Icon.png);
-}
-
-#bell {
-    display: flex;
-    width: 36px;
-    height: 36px;
-    background-repeat: no-repeat;
-    background-image: url(../images/Notifications_None_Icon.png);
-}
-
-#search {
-    display: flex;
-    width: 36px;
-    height: 36px;
-    background-repeat: no-repeat;
-    background-image: url(../images/Search_Icon.png);
-}
-
 header a {
     width: 119px;
     height: 119px;
