@@ -31,7 +31,6 @@ body {
 }
 
 #tools {
-    display: inline-flex;
 }
 
 header {
@@ -39,6 +38,7 @@ header {
     height: 80px;
     display: flex;
     align-items: center;
+    justify-self: right;
 }
 
 header a {
@@ -48,7 +48,11 @@ header a {
     background-size: contain;
     background-image: url('../images/logo.png');
 }
-
+.lastItem {
+    margin-left: auto;
+    display: flex;
+    padding:10px;
+}
 main {
     width: 360px;
     height: auto;
@@ -130,6 +134,7 @@ h2 {
 
 .utilities {
     width: 25px;
+    margin-left: auto;
 }
 
 .rectangle {
@@ -252,9 +257,22 @@ ul {
     height: 62px;
     background-image: url("../images/cars.png");
 }
-
+li > span {
+    font-size: 22px;
+    flex:15;
+}
 #events {
     width: 57px;
     height: 57px;
     background-image: url("../images/events.png");
+}
+
+.statusBox {
+    display: flex;
+    flex-direction: column;
+    flex: 10;
+    align-items: center;
+}
+#myParkingList > section {
+    display: flex;
 }

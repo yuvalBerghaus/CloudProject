@@ -6,14 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
     <title>Oops!e</title>
+
 </head>
 
 <body id="listPage">
     <header>
         <img id="ham" src="./images/list.svg">
         <a href="./index.html"></a>
-        <img class="utilities" src="./images/bell.svg">
-        <img class="utilities" src="./images/search.svg">
+        <section class="lastItem">
+            <img class="utilities" src="./images/bell.svg">
+            <img class="utilities" src="./images/search.svg">
+        </section>
     </header>
     <div id="wrapper">
         <main>
@@ -24,21 +27,23 @@
             <section id="list">
                 <!--Section of all the lists-->
                 <section id="myParkingList">
-                    <h2>
-                        My Parking Lots
-                    </h2>
-                    <section id="tools">
+                    <section>
+                        <h2>
+                            My Parking Lots
+                        </h2>
                         <article id="addParking"></article>
                         <img class="utilities" src="./images/pencil.svg">
                     </section>
                     <ul>
-                        <section class="rectangle">
+                        <li class="rectangle" name="myParkingLots[]">
                             <article class="user" id="liat"></article>
-                            <h2>My Parking</h2>
-                            <aside class="trafficLight" id="occ">
-                                <h6>Occupied</h6>
-                            </aside>
-                        </section>
+                            <span>My Parking</span>
+                            <section class="statusBox">
+                                <article class="trafficLight" id="occ">
+                                </article>
+                                <span>Occupied</span>
+                            </section>
+                        </li>
                         <hr class="line">
                     </ul>
                 </section>
@@ -47,29 +52,33 @@
                         Family Parking Lots
                     </h2>
                     <ul>
-                        <section class="rectangle">
+                        <li class="rectangle" name="familyParkingLots[]">
                             <article class="user" id="tom"> </article>
-                            <h2>Tom's Parking</h2>
-                            <aside class="trafficLight" id="att">
-                                <h6>Attention!</h6>
-                            </aside>
-                        </section>
-                        <section class="rectangle">
+                            <span>Tom's Parking</span>
+                            <section class="statusBox">
+                                <article class="trafficLight" id="att">
+                                </article>
+                                <span>Attention!</span>
+                            </section>
+                        </li>
+                        <li class="rectangle" name="familyParkingLots[]">
                             <article class="user" id="yoni"></article>
-                            <h2>Yoni's Parking</h2>
-                            <aside class="trafficLight" id="free">
-                                <h6>Free</h6>
-                            </aside>
-                        </section>
+                            <span>Yoni's Parking</span>
+                            <section class="statusBox">
+                                <atricle class="trafficLight" id="free">
+                                </atricle>
+                                <span>Free</span>
+                            </section>
+                        </li>
                         <hr class="line">
                     </ul>
                 </section>
-                <section id="friendsParkingList">
+                <section id="friendsParkingList" name="friendsParkingLots[]">
                     <h2>
                         Friends Parking Lots
                     </h2>
                     <ul id="none">
-                        <h2>NONE</h2>
+                        <li>NONE</li>
                     </ul>
                 </section>
             </section>
