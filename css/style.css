@@ -30,9 +30,6 @@ body {
     font-size: 26px;
 }
 
-#tools {
-}
-
 header {
     background-color: #CCCCCC;
     height: 80px;
@@ -47,18 +44,21 @@ header a {
     background-size: contain;
     background-image: url('../images/logo.png');
 }
+
 .lastItem {
     margin-left: auto;
-    padding:10px;
+    padding: 10px;
     display: block;
     min-width: max-content;
 }
+
 .panel {
     padding: 0 18px;
     display: none;
     background-color: white;
     overflow: hidden;
-  }
+}
+
 main {
     width: 360px;
     height: auto;
@@ -66,6 +66,7 @@ main {
     flex-wrap: wrap;
     justify-content: center;
 }
+
 nav {
     width: 360px;
     height: auto;
@@ -99,7 +100,7 @@ h2 {
     width: 33px;
     border-radius: 100%;
     margin: 5px;
-    background-image: url(../images/liatIcon.png);
+    background-image: url("../images/liatIcon.png");
 }
 
 /* List of main page by generic order */
@@ -141,7 +142,6 @@ h2 {
 .utilities {
     width: 25px;
     margin-left: auto;
-    
 }
 
 .rectangle {
@@ -179,15 +179,15 @@ ul {
     justify-content: center;
 }
 
-#occ {
+#Occupied {
     background-color: #E61610;
 }
 
-#att {
+#Attention {
     background-color: #FF6624;
 }
 
-#free {
+#Free {
     background-color: #92D36E;
 }
 
@@ -196,18 +196,6 @@ ul {
     height: 65px;
     border-radius: 100%;
     margin: 20px;
-}
-
-#liat {
-    background-image: url(../images/liat.png);
-}
-
-#yoni {
-    background-image: url(../images/yoni.png);
-}
-
-#tom {
-    background-image: url(../images/tom.png);
 }
 
 #carAndVid {
@@ -231,6 +219,7 @@ ul {
     background-color: #777777;
     color: #FFFFFF;
 }
+
 button {
     background: none;
     width: 100%;
@@ -244,6 +233,7 @@ button {
     outline: inherit;
     display: flex;
 }
+
 .arrow {
     width: 15px;
     transform: rotate(270deg);
@@ -276,10 +266,12 @@ button {
     height: 62px;
     background-image: url("../images/cars.png");
 }
-li > span {
+
+li>span {
     font-size: 22px;
-    flex:15;
+    flex: 15;
 }
+
 #events {
     width: 57px;
     height: 57px;
@@ -292,6 +284,7 @@ li > span {
     flex: 10;
     align-items: center;
 }
-#myParkingList > section {
+
+#myParkingList>section {
     display: flex;
 }

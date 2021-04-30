@@ -1,0 +1,24 @@
+{
+    "my": [
+        {
+            "name": "liat",
+            "img": "../images/liat.png",
+            "status": "Occupied"
+        }
+    ],
+    "family": [
+        {
+            "name": "Tom",
+            "img": "../images/tom.png",
+            "status": "Attention"
+        },
+        {
+            "name": "Yoni",
+            "img": "../images/yoni.png",
+            "status": "Free"
+        }
+    ],
+    "friends": [
+        {}
+    ]
+}
