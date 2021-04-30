@@ -38,7 +38,6 @@ header {
     height: 80px;
     display: flex;
     align-items: center;
-    justify-self: right;
 }
 
 header a {
@@ -50,9 +49,16 @@ header a {
 }
 .lastItem {
     margin-left: auto;
-    display: flex;
     padding:10px;
+    display: block;
+    min-width: max-content;
 }
+.panel {
+    padding: 0 18px;
+    display: none;
+    background-color: white;
+    overflow: hidden;
+  }
 main {
     width: 360px;
     height: auto;
@@ -135,6 +141,7 @@ h2 {
 .utilities {
     width: 25px;
     margin-left: auto;
+    
 }
 
 .rectangle {
@@ -224,7 +231,19 @@ ul {
     background-color: #777777;
     color: #FFFFFF;
 }
-
+button {
+    background: none;
+    width: 100%;
+    justify-content: flex-start;
+    align-items: center;
+    color: inherit;
+    border: none;
+    padding: 0;
+    font: inherit;
+    cursor: pointer;
+    outline: inherit;
+    display: flex;
+}
 .arrow {
     width: 15px;
     transform: rotate(270deg);
