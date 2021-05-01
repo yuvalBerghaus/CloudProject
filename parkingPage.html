@@ -24,50 +24,107 @@
                 <h1>My Parking</h1>
             </section>
             <section id="carAndVid">
-                <article id="carInfo"></article>
+                <button onclick="togglePopup()">
+                    <article id="carInfo"></article>
+                </button>
                 <img class="utilities" src="./images/camera-video.svg">
             </section>
             <nav>
                 <ul>
                     <li class="parkingRec">
-                        <button>
+                        <button type="button" class="collapsible">
                             <article id="action"></article>
                             <h2>Action</h2>
                             <img class="arrow" src="./images/arrow.svg">
                         </button>
+                        <div class="content">
+                            <button><img src="./images/tow.png" style="height: 20%; width: 40px;">
+                                Tow it
+                            </button>
+
+                            <hr>
+                            <button><img src="./images/objects.png" style="height: 20%; width: 40px;">
+                                Objects
+                            </button>
+                            <hr>
+                            <button><img src="./images/person.png" style="height: 20%; width: 40px;">
+                                Identify
+                            </button>
+                            <hr>
+                            <button><img src="./images/spike.png" style="height: 20%; width: 40px;">
+                                Puncture
+                            </button>
+                        </div>
                     </li>
                     <li class="parkingRec">
-                        <button>
+                        <button type="button" class="collapsible">
                             <article id="analysis"></article>
                             <h2>Analysis</h2>
                             <img class="arrow" src="./images/arrow.svg">
-                            <div class="panel">
-                                <p>button</p>
-                            </div>
                         </button>
+                        <div class="content">
+                            button
+                        </div>
                     </li>
                     <li class="parkingRec">
-                        <button>
+                        <button type="button">
                             <article id="members"></article>
                             <h2>Members</h2>
                         </button>
                     </li>
                     <li class="parkingRec">
-                        <button>
+                        <button type="button">
                             <article id="cars"></article>
                             <h2>Cars</h2>
                         </button>
                     </li>
                     <li class="parkingRec">
-                        <button>
+                        <button type="button">
                             <article id="events"></article>
                             <h2>Events</h2>
                         </button>
                     </li>
                 </ul>
             </nav>
+
+
+
+            <div class="popup" id="popup-1">
+                <div class="overlay"></div>
+                <div class="contentOne">
+                    <div class="close-btn" onclick="togglePopup()">&times;</div>
+                    <h1>Car info</h1>
+                    <br>
+                    <ul id="carInfoPopUp">
+                        <li>Car owner : Unknown</li>
+                        <li>Car model : Hyundai i10</li>
+                        <li>Color : Silver</li>
+                        <li>Plate No. : 12-345-67</li>
+                    </ul>
+                </div>
+            </div>
+
         </main>
     </div>
+    <script>
+        var coll = document.getElementsByClassName("collapsible");
+        var i;
+
+        for (i = 0; i < coll.length; i++) {
+            coll[i].addEventListener("click", function () {
+                this.classList.toggle("active");
+                var content = this.nextElementSibling;
+                if (content.style.display === "block") {
+                    content.style.display = "none";
+                } else {
+                    content.style.display = "block";
+                }
+            });
+        }
+        function togglePopup() {
+            document.getElementById("popup-1").classList.toggle("active");
+        }
+    </script>
 </body>
 
 </html>
