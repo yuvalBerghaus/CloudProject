@@ -31,12 +31,61 @@
                         <h2>
                             My Parking Lots
                         </h2>
-                        <article id="addParking"></article>
+                        <article id="addParking" onclick="openForm()"></article>
                         <img class="utilities" src="./images/pencil.svg">
                     </section>
                     <ul id="my"></ul>
                 </section>
 
+                <div id="formOverlay">
+                    <section id="myModal" class="modal">
+                        <article id="form">
+                            <h1>New Parking</h1>
+                            <form>
+                                <label>Parking ID</label>
+                                <input type="number" name="id" minlength="6" maxlength="6">
+                                <label>Parking Name</label>
+                                <input type="text" name="name">
+                                <label>Cars</label>
+
+                                <section id="carSection">
+                                    <label>Car plate number</label>
+                                    <input type="number" id="cars[]" minlength="7" maxlength="8">
+
+                                    <label onclick="addElement('cars[]')">Add</label>
+                                </section>
+                                <section id="addedCars">
+                                </section>
+
+                                <label>Members</label>
+
+                                <section id="membersForm">
+                                    <label>User Name</label>
+                                    <input type="text" id="memb" name="members" maxlength="6">
+                                    <label>Permmision type</label>
+                                    <select id="op" name="op">
+                                        <option value="Main user"> Main user </option>
+                                        <option value="Secondary user"> Secondary user </option>
+                                    </select>
+
+                                    <label onclick="addElement('memb')">Add</label>
+                                </section>
+                                <section id="addedMem">
+                                </section>
+
+                                <label>Set this Parking as default?</label>
+                                <input type="checkbox" name="default">
+
+                                <button onclick="closeForm()">
+                                    <article>Save</article>
+                                </button>
+                                <button onclick="closeForm()">
+                                    <article>Close</article>
+                                </button>
+                            </form>
+                        </article>
+                    </section>
+                </div>
                 <section id="familyParkingList">
                     <h2>
                         Family Parking Lots

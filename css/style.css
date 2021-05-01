@@ -236,8 +236,9 @@ button {
 
 .arrow {
     width: 15px;
-    padding:10px;
-    transform: rotate(270deg);
+    <<<<<<< Updated upstream padding: 10px;
+    =======padding: 10px;
+    >>>>>>>Stashed changes transform: rotate(270deg);
 }
 
 .arrowCol {
@@ -289,6 +290,7 @@ li>span {
 #myParkingList>section {
     display: flex;
 }
+
 .collapsible {
     /*background-color: #777;*/
     color: white;
@@ -298,76 +300,127 @@ li>span {
     text-align: left;
     outline: none;
     font-size: 15px;
-  }
-  .active, .collapsible:hover {
+}
+
+.active, .collapsible:hover {
     /* background-color: #555; */
-  }
-  .content {
+}
+
+.content {
     border-radius: 0px 0px 8px 8px;
-    font-size:30px;
-    padding-top:8px;
+    font-size: 30px;
+    padding-top: 8px;
     display: none;
     overflow: hidden;
     background-color: #cccccc;
-    width:-webkit-fill-available;
-  }  
+    width: -webkit-fill-available;
+}
 
+.popup .overlay {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 1;
+    display: none;
+}
 
+.popup .contentOne {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    background: #fff;
+    width: 500px;
+    height: 250px;
+    z-index: 2;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+    font-family: "Open Sans", sans-serif;
+}
 
+#carInfoPopUp {
+    margin-top: 10px;
+}
 
+.popup .close-btn {
+    cursor: pointer;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    width: 30px;
+    height: 30px;
+    background: #222;
+    color: #fff;
+    font-size: 25px;
+    font-weight: 600;
+    line-height: 30px;
+    text-align: center;
+    border-radius: 50%;
+}
 
+.popup.active .overlay {
+    display: block;
+}
 
+.popup.active .contentOne {
+    transition: all 300ms ease-in-out;
+    transform: translate(-50%, -50%) scale(1);
+}
 
-  .popup .overlay {
-    position:fixed;
-    top:0px;
-    left:0px;
-    width:100vw;
-    height:100vh;
-    background:rgba(0,0,0,0.7);
-    z-index:1;
-    display:none;
-  }
-   
-  .popup .contentOne {
-    position:absolute;
-    top:50%;
-    left:50%;
-    transform:translate(-50%,-50%) scale(0);
-    background:#fff;
-    width:500px;
-    height:250px;
-    z-index:2;
-    text-align:center;
-    padding:20px;
-    box-sizing:border-box;
-    font-family:"Open Sans",sans-serif;
-  }
-   #carInfoPopUp {
-       margin-top:10px;
-   }
-  .popup .close-btn {
-    cursor:pointer;
-    position:absolute;
-    right:20px;
-    top:20px;
-    width:30px;
-    height:30px;
-    background:#222;
-    color:#fff;
-    font-size:25px;
-    font-weight:600;
-    line-height:30px;
-    text-align:center;
-    border-radius:50%;
-  }
-   
-  .popup.active .overlay {
-    display:block;
-  }
-   
-  .popup.active .contentOne {
-    transition:all 300ms ease-in-out;
-    transform:translate(-50%,-50%) scale(1);
-  }
-   
+#formOverlay {
+    position: fixed;
+    display: none;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 2;
+    cursor: pointer;
+}
+
+#form {
+    position: absolute;
+    width: 300px;
+    height: 500px;
+    background-color: #cccccc;
+    top: 50%;
+    left: 50%;
+    color: black;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+}
+
+#carSection {
+    background-color: #eeeeee;
+}
+
+#membersForm {
+    background-color: #eeeeee;
+}
+
+#addedCars {
+    background-color: #FFFFFF;
+}
+
+#addedMem {
+    background-color: #FFFFFF;
+}
+
+.carCube {
+    background-color: #cccccc;
+    height: fit-content;
+    width: fit-content;
+}
+
+.memCube {
+    background-color: #cccccc;
+    height: fit-content;
+    width: fit-content;
+}
