@@ -55,27 +55,37 @@ addElement = (arr) => {
     if (document.getElementById(arr).value) {
         if (arr == "cars[]") {
             carArr[carArr.length] = document.getElementById(arr).value;
-            document.getElementById(arr).value = "";
+            viewElements("Cars");
         }
-        viewCars();
+        else {
+            memArr[memArr.length] = [document.getElementById(arr).value, document.getElementById("op").value];
+            document.getElementById("addedMem").innerHTML = `<h6>${memArr}</h6>`;
+            viewElements("Mem");
+        }
+        document.getElementById(arr).value = "";
+
     }
 }
 
-addMember = () => {
-    if (document.getElementById("memb").value) {
-        memArr[memArr.length] = [document.getElementById("memb").value, document.getElementById("op").value];
-        document.getElementById("memb").value = "";
-        document.getElementById("addedMem").innerHTML = `<h6>${memArr}</h6>`;
+viewElements = (data) => {
+    if (data == "Cars") {
+        document.getElementById("addedCars").innerHTML = "";
+        for (i in carArr)
+            document.getElementById("addedCars").innerHTML += `<article class="carCube">${carArr[i]}<img id="car${i}" src="images/trash.svg" onclick="removeElement(this.id)"></article>`;
+    }
+    else {
+        document.getElementById("addedMem").innerHTML = "";
+        for (i in memArr)
+            document.getElementById("addedMem").innerHTML += `<article class="memCube">${memArr[i]}<img id="memb${i}" src="images/trash.svg" onclick="removeElement(this.id)"></article>`;
     }
 }
 
-viewCars = () => {
-    document.getElementById("addedCars").innerHTML = "";
-    for (i in carArr)
-        document.getElementById("addedCars").innerHTML += `<article class="carCube">${carArr[i]}<img id="car${i}" src="images/trash.svg" onclick="removeCar(this.id)"></article>`;
-}
-
-removeCar = (index) => {
-    carArr.splice(index.split('car')[1], 1);
-    viewCars();
+removeElement = (index) => {
+    if (!index.split('car')[0]) {
+        carArr.splice(index.split('car')[1], 1);
+        index = "Cars";
+    }
+    else
+        memArr.splice(index.split('memb')[1], 1);
+    viewElements(index);
 }
