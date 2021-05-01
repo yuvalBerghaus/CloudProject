@@ -148,7 +148,6 @@ h2 {
     color: #FFFFFF;
     display: flex;
     width: 338px;
-    height: 82px;
     background-color: #555555;
     border-radius: 8px;
     margin-bottom: 8px;
@@ -236,9 +235,9 @@ button {
 
 .arrow {
     width: 15px;
-    <<<<<<< Updated upstream padding: 10px;
-    =======padding: 10px;
-    >>>>>>>Stashed changes transform: rotate(270deg);
+    padding: 10px;
+    padding: 10px;
+    transform: rotate(270deg);
 }
 
 .arrowCol {
