@@ -331,9 +331,9 @@ li>span {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%) scale(0);
-    background: #fff;
-    width: 500px;
-    height: 250px;
+    background: #f6f6f6;
+    width: 250px;
+    height: 200px;
     z-index: 2;
     text-align: center;
     padding: 20px;
@@ -380,10 +380,13 @@ li>span {
     right: 0;
     bottom: 0;
     background-color: rgba(0, 0, 0, 0.5);
+    z-index: 2;
 }
 
-#form {
+#frontOverlay {
     position: absolute;
+    display: flex;
+    flex-direction: column;
     width: 300px;
     height: 500px;
     background-color: #cccccc;
@@ -392,36 +395,50 @@ li>span {
     color: black;
     transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
+    overflow: scroll;
 }
 
-#carSection {
+form>article {
+    font-size: 18px;
+    text-align: center;
+}
+
+#frontOverlay>article {
+    text-align: center;
+    font-weight: bold;
+    font-size: 24px;
+    padding: 10px;
+}
+
+label {
+    font-size: 18px;
+    padding-left: 5px;
+}
+
+input {
+    width: 50px;
+}
+
+input[type=text] {
+    width: 90px;
+}
+
+#carSection, #membersForm {
     background-color: #eeeeee;
+    border-radius: 3px;
 }
 
-#membersForm {
-    background-color: #eeeeee;
-}
-
-#addedCars {
+#addedCars, #addedMem {
     background-color: #FFFFFF;
+    width: 200px;
+    border-radius: 8px;
 }
 
-#addedMem {
-    background-color: #FFFFFF;
-}
-
-.carCube {
+.cube {
+    text-align: center;
+    justify-content: center;
     background-color: #cccccc;
-    height: fit-content;
-    width: fit-content;
-}
-
-.memCube {
-    background-color: #cccccc;
-    height: fit-content;
-    width: fit-content;
-}
-
-.clickAble {
-    cursor: pointer;
+    height: 23px;
+    width: 100px;
+    border-radius: 8px;
 }

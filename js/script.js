@@ -27,12 +27,10 @@ list = () => fetch("../json/users.json").then(res => {
             }
             if (i != "friends")
                 document.getElementById(i).innerHTML += `<hr class="line">`;
-
         }
     }
     catch (err) { }
 });
-
 
 carInfo = () => fetch("../json/CarInfo.json").then(info => {
     return info.json();
@@ -49,10 +47,7 @@ carInfo = () => fetch("../json/CarInfo.json").then(info => {
                 <li>Plate No: ${carInfo.unknownCar[0].plate}</li>
             </ul>`
     }
-    catch (err) {
-        console.log(err)
-    }
-
+    catch (err) { }
 });
 
 myParking = () => {
@@ -77,7 +72,7 @@ closeForm = () => {
 
 addElement = (arr) => {
     if (document.getElementById(arr).value) {
-        if (arr == "cars[]") {
+        if (arr == "car") {
             carArr[carArr.length] = document.getElementById(arr).value;
             viewElements("Cars");
         }
@@ -87,7 +82,6 @@ addElement = (arr) => {
             viewElements("Mem");
         }
         document.getElementById(arr).value = "";
-
     }
 }
 
@@ -95,12 +89,12 @@ viewElements = (data) => {
     if (data == "Cars") {
         document.getElementById("addedCars").innerHTML = "";
         for (i in carArr)
-            document.getElementById("addedCars").innerHTML += `<article class="carCube">${carArr[i]}<img class="clickAble" id="car${i}" src="images/trash.svg" onclick="removeElement(this.id)"></article>`;
+            document.getElementById("addedCars").innerHTML += `<article class="cube">${carArr[i]}<img class="clickAble" id="car${i}" src="images/trash.svg" onclick="removeElement(this.id)"></article>`;
     }
     else {
         document.getElementById("addedMem").innerHTML = "";
         for (i in memArr)
-            document.getElementById("addedMem").innerHTML += `<article class="memCube">${memArr[i]}<img  class="clickAble" id="memb${i}" src="images/trash.svg" onclick="removeElement(this.id)"></article>`;
+            document.getElementById("addedMem").innerHTML += `<article class="cube">${memArr[i]}<img  class="clickAble" id="memb${i}" src="images/trash.svg" onclick="removeElement(this.id)"></article><br>`;
     }
 }
 
