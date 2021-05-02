@@ -9,7 +9,7 @@
     <title>Oops!e</title>
 </head>
 
-<body id="listPage">
+<body id="listPage" onload="list()">
     <header>
         <img id="ham" src="./images/list.svg">
         <a href="./index.html"></a>
@@ -52,7 +52,7 @@
                                     <label>Car plate number</label>
                                     <input type="number" id="cars[]" minlength="7" maxlength="8">
 
-                                    <label onclick="addElement('cars[]')">Add</label>
+                                    <aside class="clickAble" onclick="addElement('cars[]')">Add</aside>
                                 </section>
                                 <section id="addedCars">
                                 </section>
@@ -68,7 +68,7 @@
                                         <option value="Secondary user"> Secondary user </option>
                                     </select>
 
-                                    <label onclick="addElement('memb')">Add</label>
+                                    <aside class="clickAble" onclick="addElement('memb')">Add</aside>
                                 </section>
                                 <section id="addedMem">
                                 </section>
@@ -76,11 +76,11 @@
                                 <label>Set this Parking as default?</label>
                                 <input type="checkbox" name="default">
 
-                                <button onclick="closeForm()">
-                                    <article>Save</article>
+                                <button type="submit">
+                                    Save
                                 </button>
                                 <button onclick="closeForm()">
-                                    <article>Close</article>
+                                    Close
                                 </button>
                             </form>
                         </article>
