@@ -7,7 +7,6 @@
     margin: 0px auto;
     width: 360px;
 }
-
 * {
     margin: 0;
     padding: 0;
@@ -422,4 +421,48 @@ li>span {
     background-color: #cccccc;
     height: fit-content;
     width: fit-content;
+}
+aside {
+    display: none;
+}
+li.rectangle #selected {
+    background-color: #222222;
+}
+@media (min-width:768px) {
+    #wrapper {
+        /* margin: 0px auto; */
+        width: 724px;
+        /* display: none; */
+    }
+    main {
+        float:left;
+    }
+    aside {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: center;
+    }
+    #titleAside {
+        
+    }
+    /* aside {
+        display: block;
+        float: right;
+    }
+    #my-div
+    {
+        width: 340px;
+        height: 720px;
+        overflow: hidden;
+        position: relative;
+    }
+    
+    #my-iframe
+    {
+        position: absolute;
+        top: -85px;
+        left: -20px;
+        width: 380px;
+        height: 800px;
+    } */
 }
