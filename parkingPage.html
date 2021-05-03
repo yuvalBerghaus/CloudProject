@@ -5,10 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js"></script>
     <title>Oops!e</title>
 </head>
 
-<body id="mainObjectLayout">
+<body id="mainObjectLayout" onload="carInfo()">
     <header>
         <img id="ham" src="./images/list.svg">
         <a href="./index.html"></a>
@@ -87,23 +88,14 @@
                 </ul>
             </nav>
 
-
-
             <div class="popup" id="popup-1">
                 <div class="overlay"></div>
-                <div class="contentOne">
-                    <div class="close-btn" onclick="togglePopup()">&times;</div>
-                    <h1>Car info</h1>
-                    <ul id="carInfoPopUp">
-                        <li>Car owner : Unknown</li>
-                        <li>Car model : Hyundai i10</li>
-                        <li>Color : Silver</li>
-                        <li>Plate No. : 12-345-67</li>
-                    </ul>
-                </div>
+                <section id="contentOne">
+                </section>
             </div>
+    </div>
 
-        </main>
+    </main>
 
     </div>
     <script>
