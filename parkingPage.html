@@ -33,7 +33,7 @@
             <nav>
                 <ul>
                     <li class="parkingRec">
-                        <button type="button" class="collapsible">
+                        <button type="button" class="collapsible" onclick="collapse()">
                             <article id="action"></article>
                             <h2>Action</h2>
                             <img class="arrow" src="./images/arrow.svg">
@@ -42,7 +42,6 @@
                             <button><img src="./images/tow.png" style="height: 20%; width: 40px;">
                                 Tow it
                             </button>
-
                             <hr>
                             <button><img src="./images/objects.png" style="height: 20%; width: 40px;">
                                 Objects
@@ -58,7 +57,7 @@
                         </div>
                     </li>
                     <li class="parkingRec">
-                        <button type="button" class="collapsible">
+                        <button type="button">
                             <article id="analysis"></article>
                             <h2>Analysis</h2>
                             <img class="arrow" src="./images/arrow.svg">
@@ -97,25 +96,6 @@
 
     </main>
     </div>
-    <script>
-        var coll = document.getElementsByClassName("collapsible");
-        var i;
-
-        for (i = 0; i < coll.length; i++) {
-            coll[i].addEventListener("click", function () {
-                this.classList.toggle("active");
-                var content = this.nextElementSibling;
-                if (content.style.display === "block") {
-                    content.style.display = "none";
-                } else {
-                    content.style.display = "block";
-                }
-            });
-        }
-        function togglePopup() {
-            document.getElementById("popup-1").classList.toggle("active");
-        }
-    </script>
 </body>
 
 </html>

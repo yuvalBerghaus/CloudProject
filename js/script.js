@@ -94,7 +94,7 @@ addElement = (arr) => {
                 document.getElementById('membError').innerHTML = "";
                 viewElements("Mem");
             }
-            else 
+            else
                 document.getElementById('membError').innerHTML = "Only letters (3-6 characters)";
         }
         document.getElementById(arr).value = "";
@@ -122,4 +122,16 @@ removeElement = (index) => {
     else
         memArr.splice(index.split('memb')[1], 1);
     viewElements(index);
+}
+
+togglePopup = () => {
+    document.getElementById("popup-1").classList.toggle("active");
+}
+
+collapse = () => {
+    document.getElementsByClassName("collapsible")[0].classList.toggle("active");
+    if (document.getElementsByClassName("collapsible")[0].nextElementSibling.style.display === "block")
+        document.getElementsByClassName("collapsible")[0].nextElementSibling.style.display = "none";
+    else
+        document.getElementsByClassName("collapsible")[0].nextElementSibling.style.display = "block";
 }

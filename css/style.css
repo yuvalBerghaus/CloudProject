@@ -223,6 +223,7 @@ ul {
 button {
     background: none;
     width: 100%;
+    height: 65px;
     justify-content: flex-start;
     align-items: center;
     color: inherit;
