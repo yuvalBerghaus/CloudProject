@@ -130,8 +130,13 @@ togglePopup = () => {
 
 collapse = () => {
     document.getElementsByClassName("collapsible")[0].classList.toggle("active");
-    if (document.getElementsByClassName("collapsible")[0].nextElementSibling.style.display === "block")
+    if (document.getElementsByClassName("collapsible")[0].nextElementSibling.style.display === "block") {
         document.getElementsByClassName("collapsible")[0].nextElementSibling.style.display = "none";
-    else
+        document.getElementsByClassName("arrow")[0].style.transform = "rotate(270deg)";
+    }
+
+    else {
         document.getElementsByClassName("collapsible")[0].nextElementSibling.style.display = "block";
+        document.getElementsByClassName("arrow")[0].style.transform = "rotate(90deg)";
+    }
 }
