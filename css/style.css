@@ -435,7 +435,8 @@ input[type=text] {
     border-radius: 8px;
     overflow-y: scroll;
     overflow-x: hidden;
-    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
 .cube {
@@ -448,6 +449,24 @@ input[type=text] {
     width: 100px;
     border-radius: 8px;
     margin-top: 3px;
+}
+
+.formButton {
+    background-color: #bd362f;
+    border-width: 0;
+    width: 60px;
+    height: 20px;
+    border-radius: 3px;
+    font-size: 14px;
+}
+
+input[type="submit"] {
+    background-color: #62c462;
+}
+
+form>aside {
+    color: red;
+    width: 150px;
 }
 
 @media (min-width:768px) {

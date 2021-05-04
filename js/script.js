@@ -72,26 +72,30 @@ closeForm = () => {
     document.getElementById("formOverlay").style.display = "none";
     carArr = [];
     memArr = [];
-    document.getElementById('id').value = "";
-    document.getElementById('pName').value = "";
-    document.getElementById('car').value = "";
-    document.getElementById('memb').value = "";
-    document.getElementById('op').value = "Main user";
     document.getElementById('addedCars').innerHTML = "";
     document.getElementById('addedMem').innerHTML = "";
-    document.getElementById('default').checked = false;
+    document.getElementById("myForm").reset();
 }
 
 addElement = (arr) => {
     if (document.getElementById(arr).value) {
         if (arr == "car") {
-            carArr[carArr.length] = document.getElementById(arr).value;
-            viewElements("Cars");
+            if (document.getElementById(arr).checkValidity()) {
+                carArr[carArr.length] = document.getElementById(arr).value;
+                document.getElementById('carError').innerHTML = "";
+                viewElements("Cars");
+            }
+            else
+                document.getElementById('carError').innerHTML = `Must be valid plate (7-8 numbers)`;
         }
         else {
-            memArr[memArr.length] = [document.getElementById(arr).value, document.getElementById("op").value];
-            document.getElementById("addedMem").innerHTML = `<h6>${memArr}</h6>`;
-            viewElements("Mem");
+            if (document.getElementById('memb').checkValidity()) {
+                memArr[memArr.length] = [document.getElementById(arr).value, document.getElementById("op").value];
+                document.getElementById('membError').innerHTML = "";
+                viewElements("Mem");
+            }
+            else 
+                document.getElementById('membError').innerHTML = "Only letters (3-6 characters)";
         }
         document.getElementById(arr).value = "";
     }

@@ -56,7 +56,7 @@
                 <section id="frontOverlay">
                     <article>New Parking</article>
 
-                    <form action="">
+                    <form id="myForm" action="">
                         <label for="id">Parking ID<input type="text" id="id" name="id" pattern="[0-9]{6}"
                                 required></label>
                         <br><br>
@@ -64,7 +64,6 @@
                                 required></label>
                         <br><br>
                         <article>Cars</article>
-                        <br>
                         <section id="carSection">
                             <label for="car">Car plate No.
                                 <input type="text" id="car" name="cars[]" pattern="[0-9]{7,8}">
@@ -73,6 +72,7 @@
                         </section>
                         <section id="addedCars">
                         </section>
+                        <aside id="carError"></aside>
                         <br>
                         <article>Members</article>
                         <section id="membersForm">
@@ -87,14 +87,14 @@
                             </label>
                             <input type="button" onclick="addElement('memb')" value="Add">
                         </section>
-                        <br>
                         <section id="addedMem">
                         </section>
-                        <br><br>
+                        <aside id="membError"></aside>
+                        <br>
                         <label>Set this Parking as default?<input type="checkbox" id="default" name="default"></label>
                         <br>
-                        <input type="submit" value="Save">
-                        <input type="button" onclick="closeForm()" value="Close">
+                        <input class="formButton" type="submit" value="Save">
+                        <input class="formButton" type="button" onclick="closeForm()" value="Cancel">
                         <br><br>
                     </form>
                 </section>
