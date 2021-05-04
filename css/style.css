@@ -7,10 +7,6 @@
     margin: 0px auto;
     width: 360px;
 }
-* {
-    margin: 0;
-    padding: 0;
-}
 
 @viewport {
     width: 480px;
@@ -152,6 +148,7 @@ h2 {
     color: #FFFFFF;
     display: flex;
     width: 338px;
+    height: 82px;
     background-color: #555555;
     border-radius: 8px;
     margin-bottom: 8px;
@@ -398,7 +395,8 @@ li>span {
     color: black;
     transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
-    overflow: scroll;
+    overflow-y: scroll;
+    overflow-x: hidden;
 }
 
 form>article {
@@ -441,15 +439,11 @@ input[type=text] {
     text-align: center;
     justify-content: center;
     background-color: #cccccc;
-    height: fit-content;
-    width: fit-content;
+    height: 23px;
+    width: 100px;
+    border-radius: 8px;
 }
-aside {
-    display: none;
-}
-li.rectangle #selected {
-    background-color: #222222;
-}
+
 @media (min-width:768px) {
     #wrapper {
         /* margin: 0px auto; */
@@ -457,30 +451,25 @@ li.rectangle #selected {
         /* display: none; */
     }
     main {
-        float:left;
+        float: left;
     }
     aside {
         display: flex;
         flex-direction: row-reverse;
         justify-content: center;
     }
-    #titleAside {
-        
-    }
+    #titleAside {}
     /* aside {
         display: block;
         float: right;
     }
-    #my-div
-    {
+    #my-div {
         width: 340px;
         height: 720px;
         overflow: hidden;
         position: relative;
     }
-    
-    #my-iframe
-    {
+    #my-iframe {
         position: absolute;
         top: -85px;
         left: -20px;
