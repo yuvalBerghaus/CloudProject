@@ -70,6 +70,16 @@ openForm = () => {
 
 closeForm = () => {
     document.getElementById("formOverlay").style.display = "none";
+    carArr = [];
+    memArr = [];
+    document.getElementById('id').value = "";
+    document.getElementById('pName').value = "";
+    document.getElementById('car').value = "";
+    document.getElementById('memb').value = "";
+    document.getElementById('op').value = "Main user";
+    document.getElementById('addedCars').innerHTML = "";
+    document.getElementById('addedMem').innerHTML = "";
+    document.getElementById('default').checked = false;
 }
 
 addElement = (arr) => {

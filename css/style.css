@@ -395,8 +395,6 @@ li>span {
     color: black;
     transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
-    overflow-y: scroll;
-    overflow-x: hidden;
 }
 
 form>article {
@@ -430,18 +428,26 @@ input[type=text] {
 }
 
 #addedCars, #addedMem {
+    display: flex;
     background-color: #FFFFFF;
-    width: 200px;
+    width: 150px;
+    height: 69px;
     border-radius: 8px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    justify-content: center;
 }
 
 .cube {
+    display: flex;
     text-align: center;
     justify-content: center;
+    align-items: center;
     background-color: #cccccc;
     height: 23px;
     width: 100px;
     border-radius: 8px;
+    margin-top: 3px;
 }
 
 @media (min-width:768px) {

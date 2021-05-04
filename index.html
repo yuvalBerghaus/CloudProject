@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <link rel="stylesheet" href="css/style.css">
     <script src="js/script.js"></script>
     <title>Oops!e</title>
@@ -66,7 +66,7 @@
                         <article>Cars</article>
                         <br>
                         <section id="carSection">
-                            <label for="car">Car plate number
+                            <label for="car">Car plate No.
                                 <input type="text" id="car" name="cars[]" pattern="[0-9]{7,8}">
                             </label>
                             <input type="button" onclick="addElement('car')" value="Add">
@@ -85,13 +85,13 @@
                                     <option value="Secondary user"> Secondary user </option>
                                 </select>
                             </label>
-                            <br><br>
                             <input type="button" onclick="addElement('memb')" value="Add">
                         </section>
+                        <br>
                         <section id="addedMem">
                         </section>
                         <br><br>
-                        <label>Set this Parking as default?<input type="checkbox" name="default"></label>
+                        <label>Set this Parking as default?<input type="checkbox" id="default" name="default"></label>
                         <br>
                         <input type="submit" value="Save">
                         <input type="button" onclick="closeForm()" value="Close">
