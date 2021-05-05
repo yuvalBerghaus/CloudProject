@@ -504,7 +504,11 @@ form>aside {
     color: red;
     width: 150px;
 }
-
+.collapsible section {
+    flex: 1;
+    justify-content: flex-end;
+    display: flex;
+}
 #parkingImg {
     width: 221px;
     height: 124px;

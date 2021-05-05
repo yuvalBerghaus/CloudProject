@@ -1,5 +1,6 @@
 let carArr = [];
 let memArr = [];
+let tabInfo = [];
 
 checkMediaQuery = () => {
     try {
@@ -24,6 +25,7 @@ fetch("../json/CarInfo.json").then(info => {
     return info.json();
 }).then(carInfo => {
     try {
+        tabInfo = carInfo;
         document.getElementById('contentOne').innerHTML =
             `<div class="close-btn" onclick="togglePopup()">&times;</div>
             <h1>Car info</h1>
@@ -78,10 +80,10 @@ list = () => fetch("../json/users.json").then(res => {
             <section id="asideDis">
             <h1>My Parking</h1>
             <img id="parkingImg" src="./images/parking.png">
-                ${carArr.unknownCar[0].carOwner}
-                ${carArr.unknownCar[0].carModel}
-                ${carArr.unknownCar[0].color}
-                ${carArr.unknownCar[0].plate}
+                ${tabInfo.unknownCar[0].carOwner}
+                ${tabInfo.unknownCar[0].carModel}
+                ${tabInfo.unknownCar[0].color}
+                ${tabInfo.unknownCar[0].plate}
             </section>
         </section>`;
     }
