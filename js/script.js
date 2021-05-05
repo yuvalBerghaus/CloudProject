@@ -21,7 +21,7 @@ checkMediaQuery = () => {
 // Add a listener for when the window resizes
 window.addEventListener('resize', checkMediaQuery);
 
-fetch("../json/CarInfo.json").then(info => {
+fetch("./json/carInfo.json").then(info => {
     return info.json();
 }).then(carInfo => {
     try {
@@ -40,7 +40,7 @@ fetch("../json/CarInfo.json").then(info => {
     catch (err) { }
 });
 
-list = () => fetch("../json/users.json").then(res => {
+list = () => fetch("./json/users.json").then(res => {
     return res.json();
 }).then(arr => {
     try {
@@ -60,11 +60,11 @@ list = () => fetch("../json/users.json").then(res => {
                             </section>
                             </button>
                             <section class="bottomOptionTablet">
-                                <section><img src="../images/Local_Fire_Department_Icon_3.png">Actions</section>
-                                <section><img src="../images/Insert_Chart_Outlined_Icon_3.png">Analysis</section>
-                                <section><img src="../images/Group_18.png">Analysis</section>
-                                <section><img src="../images/Directions_Car_Icon_3.png">Cars</section>
-                                <section><img src="../images/Event_Available_Icon_3.png">Events</section>
+                                <section><img src="./images/Local_Fire_Department_Icon_3.png">Actions</section>
+                                <section><img src="./images/Insert_Chart_Outlined_Icon_3.png">Analysis</section>
+                                <section><img src="./images/Group_18.png">Analysis</section>
+                                <section><img src="./images/Directions_Car_Icon_3.png">Cars</section>
+                                <section><img src="./images/Event_Available_Icon_3.png">Events</section>
                             </section>
                             </button>
                         </li><br>`;
