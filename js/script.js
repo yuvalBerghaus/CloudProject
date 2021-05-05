@@ -2,16 +2,35 @@ let carArr = [];
 let memArr = [];
 let tabInfo = [];
 
+// checkMediaQuery = () => {
+//     try {
+//         // If the inner width of the window is greater then 768px
+//         if (window.innerWidth < 768) {
+//             // Then log this message to the console
+//             document.getElementById("asideTablet").style.display = "none";
+//             document.getElementById("asideDis").style.display = "none";
+//             document.getElementById("Lital").style.backgroundColor = "";
+
+//         }
+//         else {
+//             if (location.pathname == "/parkingPage.html")
+//                 location.href = "index.html";
+//             document.getElementById("asideTablet").style.display = "flex";
+//         }
+//     }
+//     catch (err) { }
+// }
 checkMediaQuery = () => {
     try {
         // If the inner width of the window is greater then 768px
         if (window.innerWidth < 768 && location.pathname == "/students/2020-2021/web1/dev_206/index.html") {
             // Then log this message to the console
             document.getElementById("asideTablet").style.display = "none";
+            document.getElementById("asideDis").style.display = "none";
             document.getElementById("Lital").style.backgroundColor = "";
         }
         else {
-            if (location.pathname == "/students/2020-2021/web1/dev_206/parkingPage.html")
+            if (window.innerWidth > 768 && location.pathname == "/students/2020-2021/web1/dev_206/parkingPage.html")
                 location.href = "/students/2020-2021/web1/dev_206/index.html";
             else
                 document.getElementById("asideTablet").style.display = "flex";
@@ -19,6 +38,7 @@ checkMediaQuery = () => {
     }
     catch (err) { }
 }
+
 // Add a listener for when the window resizes
 window.addEventListener('resize', checkMediaQuery);
 
@@ -77,16 +97,18 @@ list = () => fetch("./json/users.json").then(res => {
                 document.getElementById(i).innerHTML += `<hr class="line">`;
         }
         document.getElementById('asideTablet').innerHTML += `
-        <section>
             <section id="asideDis">
             <h1>My Parking</h1>
-            <img id="parkingImg" src="./images/parking.png">
+            <img id="parkingImg" src="./images/parking.png"><article>
                 ${tabInfo.unknownCar[0].carOwner}
+                <br>
                 ${tabInfo.unknownCar[0].carModel}
+                <br>
                 ${tabInfo.unknownCar[0].color}
+                <br>
                 ${tabInfo.unknownCar[0].plate}
-            </section>
-        </section>`;
+                </article>
+            </section>`;
     }
     catch (err) { }
 });
