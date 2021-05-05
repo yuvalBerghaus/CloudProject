@@ -204,6 +204,10 @@ ul {
     display: flex;
 }
 
+#carAndVid>button {
+    height: unset;
+}
+
 #carInfo {
     width: 227px;
     height: 121px;
@@ -243,8 +247,24 @@ button {
     transform: rotate(270deg);
 }
 
-.arrowCol {
-    transform: rotate(90deg);
+#tow {
+    height: 35px;
+    width: 62px;
+}
+
+#objects {
+    height: 41px;
+    width: 41px;
+}
+
+#identify {
+    height: 48px;
+    width: 34px;
+}
+
+#puncture {
+    height: 45px;
+    width: 67px;
 }
 
 #action {
@@ -318,6 +338,10 @@ li>span {
     width: -webkit-fill-available;
 }
 
+.content>button {
+    height: 45px;
+}
+
 .popup .overlay {
     position: fixed;
     top: 0px;
@@ -356,7 +380,7 @@ li>span {
     width: 30px;
     height: 30px;
     background: #222;
-    color: #fff;
+    color: #FFFFFF;
     font-size: 25px;
     font-weight: 600;
     line-height: 30px;
