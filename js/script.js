@@ -5,15 +5,16 @@ let tabInfo = [];
 checkMediaQuery = () => {
     try {
         // If the inner width of the window is greater then 768px
-        if (window.innerWidth < 768) {
+        if (window.innerWidth < 768 && location.pathname == "/students/2020-2021/web1/dev_206/index.html") {
             // Then log this message to the console
             document.getElementById("asideTablet").style.display = "none";
             document.getElementById("Lital").style.backgroundColor = "";
         }
         else {
-            if (location.pathname == "/parkingPage.html")
-                location.href = "index.html";
-            document.getElementById("asideTablet").style.display = "flex";
+            if (location.pathname == "/students/2020-2021/web1/dev_206/parkingPage.html")
+                location.href = "/students/2020-2021/web1/dev_206/index.html";
+            else
+                document.getElementById("asideTablet").style.display = "flex";
         }
     }
     catch (err) { }
