@@ -150,7 +150,6 @@ h2 {
     background-color: #555555;
     border-radius: 8px;
     margin-bottom: 8px;
-
 }
 
 ul {
@@ -386,18 +385,19 @@ li>span {
 
 .popup.active .overlay {
     display: block;
-
 }
 
 .popup.active #contentOne {
     transition: all 300ms ease-in-out;
     transform: translate(-50%, -50%) scale(1);
 }
+
 form {
     display: flex;
     flex-direction: column;
     width: 100%;
 }
+
 #formOverlay {
     position: fixed;
     display: none;
@@ -422,11 +422,13 @@ form {
     color: black;
     transform: translate(-50%, -50%);
 }
+
 .saveOrCancel {
     display: flex;
     width: 100%;
-    flex:1;
+    flex: 1;
 }
+
 form>article {
     font-size: 18px;
     text-align: center;
@@ -437,7 +439,7 @@ form>article {
     text-align: center;
     font-weight: bold;
     font-size: 24px;
-    flex:1;
+    flex: 1;
 }
 
 label {
@@ -492,10 +494,12 @@ input[type=text] {
 input[type="submit"] {
     background-color: #62c462;
 }
+
 .bottomOptionTablet {
     visibility: hidden;
     display: none;
 }
+
 form>aside {
     color: red;
     width: 150px;
@@ -526,13 +530,14 @@ form>aside {
         justify-content: space-evenly;
         align-items: center;
     }
-    .bottomOptionTablet section{
+    .bottomOptionTablet section {
         display: flex;
-    flex-direction: column;
-    align-items: center;
-    color:black;
+        flex-direction: column;
+        align-items: center;
+        color: black;
     }
     #asideTablet {
-        flex:1;
+        flex: 1;
+        background-color: #eeeeee;
     }
 }

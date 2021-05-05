@@ -1,5 +1,6 @@
 let carArr = [];
 let memArr = [];
+let wrapper = document.getElementById("wrapper");
 
 list = () => fetch("../json/users.json").then(res => {
     return res.json();
@@ -59,9 +60,10 @@ carInfo = () => fetch("../json/CarInfo.json").then(info => {
     }
     catch (err) { }
 });
-
 myParking = () => {
-    location.href = "parkingPage.html";
+    wrapper = document.getElementById("wrapper");
+    console.log(this.wrapper.style);
+    //location.href = "parkingPage.html";
 }
 
 TomParking = () => {
