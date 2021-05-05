@@ -8,6 +8,7 @@ checkMediaQuery = () => {
         if (window.innerWidth < 768) {
             // Then log this message to the console
             document.getElementById("asideTablet").style.display = "none";
+            document.getElementById("Lital").style.backgroundColor = "";
         }
         else {
             if (location.pathname == "/parkingPage.html")
@@ -43,13 +44,13 @@ list = () => fetch("../json/users.json").then(res => {
     return res.json();
 }).then(arr => {
     try {
-        document.getElementById("asideTablet").style.display = "none";
+        // document.getElementById("asideTablet").style.display = "none";
         memArr = arr;
         for (i in arr) {
             for (j of arr[i]) {
                 if (j.name) {
                     document.getElementById(i).innerHTML +=
-                        `<li class="rectangle" name="myParkingLots[]">
+                        `<li class="rectangle" name="myParkingLots[]" id="${j.name}">
                             <button class="parkingList" onclick="${i == 'my' ? 'my' : j.name}Parking()">
                             <article>
                                 <img class="user" src="${j.img}">
@@ -94,8 +95,10 @@ list = () => fetch("../json/users.json").then(res => {
 myParking = () => {
     if (window.getComputedStyle(wrapper, null).getPropertyValue("display") == "block")
         location.href = "parkingPage.html";
-    else
+    else {
         document.getElementById("asideDis").style.display = "flex";
+        document.getElementById("Lital").style.backgroundColor = "#222222";
+    }
 }
 
 TomParking = () => {
