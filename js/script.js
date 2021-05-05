@@ -20,7 +20,15 @@ list = () => fetch("../json/users.json").then(res => {
                                 <span>${j.status == 'Attention' ? j.status + '!' : j.status}</span>
                             </section>
                             </button>
-                        </li>`;
+                            <section class="bottomOptionTablet">
+                                <section><img src="../images/Local_Fire_Department_Icon_3.png">Actions</section>
+                                <section><img src="../images/Insert_Chart_Outlined_Icon_3.png">Analysis</section>
+                                <section><img src="../images/Group_18.png">Analysis</section>
+                                <section><img src="../images/Directions_Car_Icon_3.png">Cars</section>
+                                <section><img src="../images/Event_Available_Icon_3.png">Events</section>
+                            </section>
+                            </button>
+                        </li><br>`;
                 }
                 else
                     document.getElementById(i).innerHTML += `<li id="none">NONE</li>`;

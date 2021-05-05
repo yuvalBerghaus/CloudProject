@@ -6,6 +6,7 @@
 #wrapper {
     margin: 0px auto;
     width: 360px;
+    
 }
 
 @viewport {
@@ -147,12 +148,13 @@ h2 {
 .rectangle {
     color: #FFFFFF;
     display: flex;
+    flex-direction: column;
     width: 338px;
     height: 82px;
     background-color: #555555;
     border-radius: 8px;
     margin-bottom: 8px;
-    align-items: center;
+
 }
 
 ul {
@@ -223,7 +225,7 @@ ul {
 button {
     background: none;
     width: 100%;
-    height: 65px;
+    /* height: 65px; */
     justify-content: flex-start;
     align-items: center;
     color: inherit;
@@ -364,13 +366,19 @@ li>span {
 
 .popup.active .overlay {
     display: block;
+
 }
 
 .popup.active #contentOne {
     transition: all 300ms ease-in-out;
     transform: translate(-50%, -50%) scale(1);
 }
-
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
 #formOverlay {
     position: fixed;
     display: none;
@@ -387,32 +395,33 @@ li>span {
 #frontOverlay {
     position: absolute;
     display: flex;
-    flex-direction: column;
-    width: 300px;
-    height: 500px;
+    overflow-y: scroll;
+    flex-direction: row;
+    height: 85%;
+    width: auto;
+    flex-wrap: wrap;
     background-color: #cccccc;
     top: 50%;
     left: 50%;
     color: black;
     transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
 }
 
 form>article {
     font-size: 18px;
     text-align: center;
+    width: 100%;
 }
 
 #frontOverlay>article {
     text-align: center;
     font-weight: bold;
     font-size: 24px;
-    padding: 10px;
+    width: 100%;
 }
 
 label {
     font-size: 18px;
-    padding-left: 5px;
 }
 
 input {
@@ -426,18 +435,17 @@ input[type=text] {
 #carSection, #membersForm {
     background-color: #eeeeee;
     border-radius: 3px;
+    display: flex;
+    flex-direction: column;
 }
 
 #addedCars, #addedMem {
-    display: flex;
     background-color: #FFFFFF;
     width: 150px;
     height: 69px;
     border-radius: 8px;
     overflow-y: scroll;
     overflow-x: hidden;
-    align-items: center;
-    flex-direction: column;
 }
 
 .cube {
@@ -464,7 +472,10 @@ input[type=text] {
 input[type="submit"] {
     background-color: #62c462;
 }
-
+.bottomOptionTablet {
+    visibility: hidden;
+    display: none;
+}
 form>aside {
     color: red;
     width: 150px;
@@ -474,6 +485,7 @@ form>aside {
     #wrapper {
         /* margin: 0px auto; */
         width: 724px;
+        display: flex;
         /* display: none; */
     }
     main {
@@ -483,6 +495,24 @@ form>aside {
         display: flex;
         flex-direction: row-reverse;
         justify-content: center;
+    }
+    .rectangle {
+        height: unset;
+    }
+    .bottomOptionTablet {
+        width: 100%;
+        display: flex;
+        visibility: visible;
+        border-radius: 0px 0px 8px 8px;
+        background-color: #cccccc;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+    .bottomOptionTablet section{
+        display: flex;
+    flex-direction: column;
+    align-items: center;
+    color:black;
     }
     #titleAside {}
     /* aside {

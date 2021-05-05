@@ -59,10 +59,8 @@
                     <form id="myForm" action="">
                         <label for="id">Parking ID<input type="text" id="id" name="id" pattern="[0-9]{6}"
                                 required></label>
-                        <br><br>
                         <label for="pName">Parking Name<input type="text" id="pName" name="name" pattern="[A-Za-z]{3,6}"
                                 required></label>
-                        <br><br>
                         <article>Cars</article>
                         <section id="carSection">
                             <label for="car">Car plate No.
@@ -73,12 +71,10 @@
                         <section id="addedCars">
                         </section>
                         <aside id="carError"></aside>
-                        <br>
                         <article>Members</article>
                         <section id="membersForm">
                             <label for="memb">User Name<input type="text" id="memb" name="members"
                                     pattern="[A-Za-z]{3,6}"></label>
-                            <br>
                             <label for="op">Permmision type
                                 <select id="op" name="op">
                                     <option value="Main user"> Main user </option>
@@ -90,12 +86,9 @@
                         <section id="addedMem">
                         </section>
                         <aside id="membError"></aside>
-                        <br>
                         <label>Set this Parking as default?<input type="checkbox" id="default" name="default"></label>
-                        <br>
                         <input class="formButton" type="submit" value="Save">
                         <input class="formButton" type="button" onclick="closeForm()" value="Cancel">
-                        <br><br>
                     </form>
                 </section>
             </div>
