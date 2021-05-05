@@ -6,7 +6,6 @@
 #wrapper {
     margin: 0px auto;
     width: 360px;
-    
 }
 
 @viewport {
@@ -229,7 +228,7 @@ ul {
 button {
     background: none;
     width: 100%;
-    /* height: 65px; */
+    height: 65px;
     justify-content: flex-start;
     align-items: center;
     color: inherit;
@@ -402,6 +401,7 @@ form {
     flex-direction: column;
     align-items: center;
     width: 100%;
+    height: 100%;
 }
 #formOverlay {
     position: fixed;
