@@ -1,7 +1,6 @@
 let carArr = [];
 let memArr = [];
 
-
 checkMediaQuery = () => {
     try {
         // If the inner width of the window is greater then 768px
@@ -25,7 +24,6 @@ fetch("../json/CarInfo.json").then(info => {
     return info.json();
 }).then(carInfo => {
     try {
-        carArr = carInfo;
         document.getElementById('contentOne').innerHTML =
             `<div class="close-btn" onclick="togglePopup()">&times;</div>
             <h1>Car info</h1>
@@ -44,8 +42,6 @@ list = () => fetch("../json/users.json").then(res => {
     return res.json();
 }).then(arr => {
     try {
-        // document.getElementById("asideTablet").style.display = "none";
-        memArr = arr;
         for (i in arr) {
             for (j of arr[i]) {
                 if (j.name) {

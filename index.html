@@ -12,11 +12,11 @@
 
 <body id="listPage" onload="list(); checkMediaQuery()">
     <header>
-        <img id="ham" src="./images/list.svg">
+        <img id="ham" src="./images/list.svg" alt="ham" title="ham">
         <a href="./index.html"></a>
         <section class="lastItem">
-            <img class="utilities" src="./images/bell.svg">
-            <img class="utilities" src="./images/search.svg">
+            <img class="utilities" src="./images/bell.svg" alt="notification" title="notification">
+            <img class="utilities" src="./images/search.svg" alt="search" title="search">
         </section>
     </header>
     <div id="wrapper">
@@ -33,7 +33,7 @@
                             My Parking Lots
                         </h2>
                         <article id="addParking" onclick="openForm()"></article>
-                        <img class="utilities" src="./images/pencil.svg">
+                        <img class="utilities" src="./images/pencil.svg" alt="edit" title="edit">
                     </section>
                     <ul id="my"></ul>
                 </section>
@@ -44,7 +44,7 @@
                     </h2>
                     <ul id="family"></ul>
                 </section>
-                <section id="friendsParkingList" name="friendsParkingLots[]">
+                <section id="friendsParkingList">
                     <h2>
                         Friends Parking Lots
                     </h2>
@@ -59,7 +59,7 @@
                 <section id="frontOverlay">
                     <article>New Parking</article>
 
-                    <form id="myForm" action="">
+                    <form id="myForm">
                         <label for="id">Parking ID<input type="text" id="id" name="id" pattern="[0-9]{6}"
                                 required></label>
                         <label for="pName">Parking Name<input type="text" id="pName" name="name" pattern="[A-Za-z]{3,6}"
