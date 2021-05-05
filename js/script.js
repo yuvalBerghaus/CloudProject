@@ -118,7 +118,7 @@ viewElements = (data) => {
     else {
         document.getElementById("addedMem").innerHTML = "";
         for (i in memArr)
-            document.getElementById("addedMem").innerHTML += `<article class="cube">${memArr[i]}<img  class="clickAble" id="memb${i}" src="images/trash.svg" onclick="removeElement(this.id)"></article><br>`;
+            document.getElementById("addedMem").innerHTML += `<article class="cube">${memArr[i]}<img  class="clickAble" id="memb${i}" src="images/trash.svg" onclick="removeElement(this.id)"></article>`;
     }
 }
 

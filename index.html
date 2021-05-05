@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <link rel="stylesheet" href="css/style.css">
+    <link href='https://fonts.googleapis.com/css?family=Assistant' rel='stylesheet'>
     <script src="js/script.js"></script>
     <title>Oops!e</title>
 </head>
@@ -67,8 +68,8 @@
                                 <input type="text" id="car" name="cars[]" pattern="[0-9]{7,8}">
                             </label>
                             <input type="button" onclick="addElement('car')" value="Add">
-                        </section>
-                        <section id="addedCars">
+                            <section id="addedCars">
+                            </section>
                         </section>
                         <aside id="carError"></aside>
                         <article>Members</article>
@@ -82,13 +83,15 @@
                                 </select>
                             </label>
                             <input type="button" onclick="addElement('memb')" value="Add">
-                        </section>
-                        <section id="addedMem">
+                            <section id="addedMem">
+                            </section>
                         </section>
                         <aside id="membError"></aside>
                         <label>Set this Parking as default?<input type="checkbox" id="default" name="default"></label>
-                        <input class="formButton" type="submit" value="Save">
-                        <input class="formButton" type="button" onclick="closeForm()" value="Cancel">
+                        <section class="saveOrCancel">
+                            <input class="formButton" type="submit" value="Save">
+                            <input class="formButton" type="button" onclick="closeForm()" value="Cancel">
+                        </section>
                     </form>
                 </section>
             </div>
@@ -98,7 +101,7 @@
                 <iframe id="my-iframe" scrolling="no" src="http://127.0.0.1:5500/parkingPage.html"></iframe>
             </div>
         </aside> -->
-        <aside id="titleAside">
+        <aside id="asideTablet">
         </aside>
     </div>
 </body>
