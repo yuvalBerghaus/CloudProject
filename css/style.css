@@ -14,7 +14,7 @@
 }
 
 header, main, footer, nav {
-    display: block;
+    display: flex;
 }
 
 body {
@@ -28,7 +28,6 @@ body {
 header {
     background-color: #CCCCCC;
     height: 80px;
-    display: flex;
     align-items: center;
 }
 
@@ -57,7 +56,6 @@ header a {
 main {
     width: 360px;
     height: auto;
-    display: flex;
     flex-wrap: wrap;
     justify-content: center;
 }
@@ -65,7 +63,6 @@ main {
 nav {
     width: 360px;
     height: auto;
-    display: flex;
     flex-wrap: wrap;
     justify-content: center;
 }
@@ -323,9 +320,9 @@ li>span {
     font-size: 15px;
 }
 
-.active, .collapsible:hover {
-    /* background-color: #555; */
-}
+/* .active, .collapsible:hover {
+    background-color: #555;
+} */
 
 .content {
     border-radius: 0px 0px 8px 8px;
@@ -469,7 +466,6 @@ input[type=text] {
     overflow-y: scroll;
     overflow-x: hidden;
     display: flex;
-    /* justify-content: space-evenly; */
     flex-direction: column;
     align-items: center;
 }
@@ -478,9 +474,7 @@ input[type=text] {
     display: flex;
     text-align: center;
     justify-content: center;
-    /* align-items: center; */
     background-color: #cccccc;
-    /* height: auto; */
     width: 80%;
     border-radius: 8px;
     margin: 2px;
@@ -509,10 +503,8 @@ form>aside {
 
 @media (min-width:768px) {
     #wrapper {
-        /* margin: 0px auto; */
         width: 724px;
         display: flex;
-        /* display: none; */
     }
     main {
         float: left;
@@ -543,21 +535,4 @@ form>aside {
     #asideTablet {
         flex:1;
     }
-    /* aside {
-        display: block;
-        float: right;
-    }
-    #my-div {
-        width: 340px;
-        height: 720px;
-        overflow: hidden;
-        position: relative;
-    }
-    #my-iframe {
-        position: absolute;
-        top: -85px;
-        left: -20px;
-        width: 380px;
-        height: 800px;
-    } */
 }
