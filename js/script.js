@@ -1,11 +1,50 @@
 let carArr = [];
 let memArr = [];
-let wrapper = document.getElementById("wrapper");
+
+
+checkMediaQuery = () => {
+    try {
+        // If the inner width of the window is greater then 768px
+        if (window.innerWidth < 768) {
+            // Then log this message to the console
+            document.getElementById("asideTablet").style.display = "none";
+        }
+        else {
+            if (location.pathname == "/parkingPage.html")
+                location.href = "index.html";
+            document.getElementById("asideTablet").style.display = "flex";
+        }
+    }
+    catch (err) { }
+}
+// Add a listener for when the window resizes
+window.addEventListener('resize', checkMediaQuery);
+
+fetch("../json/CarInfo.json").then(info => {
+    return info.json();
+}).then(carInfo => {
+    try {
+        carArr = carInfo;
+        document.getElementById('contentOne').innerHTML =
+            `<div class="close-btn" onclick="togglePopup()">&times;</div>
+            <h1>Car info</h1>
+            <br>
+            <ul id="carInfoPopUp">
+                <li>Car owner: ${carInfo.unknownCar[0].carOwner}</li>
+                <li>Car model: ${carInfo.unknownCar[0].carModel}</li>
+                <li>Color: ${carInfo.unknownCar[0].color}</li>
+                <li>Plate No: ${carInfo.unknownCar[0].plate}</li>
+            </ul>`;
+    }
+    catch (err) { }
+});
 
 list = () => fetch("../json/users.json").then(res => {
     return res.json();
 }).then(arr => {
     try {
+        document.getElementById("asideTablet").style.display = "none";
+        memArr = arr;
         for (i in arr) {
             for (j of arr[i]) {
                 if (j.name) {
@@ -37,33 +76,26 @@ list = () => fetch("../json/users.json").then(res => {
             if (i != "friends")
                 document.getElementById(i).innerHTML += `<hr class="line">`;
         }
-        document.getElementById("selected").style.backgroundColor = "#222222";
-        document.getElementById("titleAside").innerHTML += "<span>My parking</span>";
+        document.getElementById('asideTablet').innerHTML += `
+        <section>
+            <section id="asideDis">
+            <h1>My Parking</h1>
+            <img id="parkingImg" src="./images/parking.png">
+                ${carArr.unknownCar[0].carOwner}
+                ${carArr.unknownCar[0].carModel}
+                ${carArr.unknownCar[0].color}
+                ${carArr.unknownCar[0].plate}
+            </section>
+        </section>`;
     }
     catch (err) { }
 });
 
-carInfo = () => fetch("../json/CarInfo.json").then(info => {
-    return info.json();
-}).then(carInfo => {
-    try {
-        document.getElementById('contentOne').innerHTML =
-            `<div class="close-btn" onclick="togglePopup()">&times;</div>
-            <h1>Car info</h1>
-            <br>
-            <ul id="carInfoPopUp">
-                <li>Car owner: ${carInfo.unknownCar[0].carOwner}</li>
-                <li>Car model: ${carInfo.unknownCar[0].carModel}</li>
-                <li>Color: ${carInfo.unknownCar[0].color}</li>
-                <li>Plate No: ${carInfo.unknownCar[0].plate}</li>
-            </ul>`
-    }
-    catch (err) { }
-});
 myParking = () => {
-    wrapper = document.getElementById("wrapper");
-    console.log(this.wrapper.style);
-    //location.href = "parkingPage.html";
+    if (window.getComputedStyle(wrapper, null).getPropertyValue("display") == "block")
+        location.href = "parkingPage.html";
+    else
+        document.getElementById("asideDis").style.display = "flex";
 }
 
 TomParking = () => {

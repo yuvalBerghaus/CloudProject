@@ -505,6 +505,11 @@ form>aside {
     width: 150px;
 }
 
+#parkingImg {
+    width: 221px;
+    height: 124px;
+}
+
 @media (min-width:768px) {
     #wrapper {
         width: 724px;
@@ -539,5 +544,10 @@ form>aside {
     #asideTablet {
         flex: 1;
         background-color: #eeeeee;
+        
+    }
+    #asideDis {
+        display: none;
+        flex-direction: column;
     }
 }
